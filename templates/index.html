@@ -1,0 +1,24 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Processed PDFs</title>
+</head>
+<body>
+    <h1>Processed PDFs</h1>
+
+   
+    <ul>
+        {% for doc in documents %}
+            <li>
+                <strong>{{ doc['filename'] }}</strong><br>
+                Summary: {{ doc['summary'] }}<br>
+                Keywords: {{ doc['keywords'] | join(", ") }}<br>
+                <a href="{{ url_for('static', filename='pdf_downloads/' + doc['filename']) }}" download>Download</a>
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

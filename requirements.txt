@@ -1,0 +1,6 @@
+# requirements.txt
+flask==2.0.1
+pymongo==4.1.1
+PyMuPDF==1.19.6
+requests==2.26.0
+urllib3==1.26.7
